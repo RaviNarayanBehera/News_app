@@ -14,6 +14,7 @@ class NewsModel {
 
 class Article {
   late String author, title, description, content, url, urlToImage;
+  late Source source;
 
   Article({
     required this.author,
@@ -21,7 +22,8 @@ class Article {
     required this.description,
     required this.content,
     required this.url,
-    // required this.urlToImage,
+    required this.urlToImage,
+    required this.source
   });
 
   factory Article.fromJson(Map m1) {
@@ -30,54 +32,20 @@ class Article {
       title: m1['title']?? 'No Title',
       description: m1['description']?? 'No Description',
       content: m1['content']?? 'No Content',
-      url: m1['url']?? 'No URL',
-      // urlToImage: m1['urlToImage'] ,
+      url: m1['url']?? '',
+      urlToImage: m1['urlToImage'] ?? 'https://img.freepik.com/premium-photo/cardano-blockchain-platform_23-2150411956.jpg',
+      source: Source.fromMap(m1['source']),
     );
   }
 }
 
-// class NewsModel {
-//   late String status;
-//   List<Article> articles;
-//
-//   NewsModel({required this.status, required this.articles});
-//
-//   factory NewsModel.fromJson(Map<String, dynamic> json) {
-//     return NewsModel(
-//       status: json['status'] as String? ?? 'unknown', // Provide a default value
-//       articles: (json['articles'] as List<dynamic>?)
-//           ?.map((e) => Article.fromJson(e as Map<String, dynamic>))
-//           .toList() ??
-//           [], // Handle null list
-//     );
-//   }
-// }
-//
-// class Article {
-//   String author;
-//   String title;
-//   String description;
-//   String content;
-//   String url;
-//   String? urlToImage; // Added urlToImage field as nullable
-//
-//   Article({
-//     required this.author,
-//     required this.title,
-//     required this.description,
-//     required this.content,
-//     required this.url,
-//     this.urlToImage, // Make urlToImage optional
-//   });
-//
-//   factory Article.fromJson(Map<String, dynamic> json) {
-//     return Article(
-//       author: json['author'] as String? ?? 'No Author', // Default to 'No Author'
-//       title: json['title'] as String? ?? 'No Title', // Default to 'No Title'
-//       description: json['description'] as String? ?? 'No Description', // Default to 'No Description'
-//       content: json['content'] as String? ?? 'No Content', // Default to 'No Content'
-//       url: json['url'] as String? ?? 'No URL', // Default to 'No URL'
-//       urlToImage: json['urlToImage'] as String?, // Handle nullable
-//     );
-//   }
-// }
+class Source {
+  late String name;
+
+  Source({required this.name});
+
+  factory Source.fromMap(Map m1) {
+    return Source(name: m1['name'] ?? 'Google');
+  }
+
+}
