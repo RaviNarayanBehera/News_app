@@ -7,7 +7,6 @@ class Helper {
   Future<Map> fetchApiData() async {
     String companyApi =
         'https://newsapi.org/v2/everything?q=apple&from=2024-08-12&to=2024-08-12&sortBy=popularity&apiKey=06a2c1a36abb489d98bffb5a7885cc8c';
-
     Uri url = Uri.parse(companyApi);
 
     Response response = await http.get(url);

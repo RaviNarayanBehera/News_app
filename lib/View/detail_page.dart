@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import '../controller/news_controller.dart';
 import '../controller/url_controller.dart';
 import '../utils/global.dart';
-import 'home_page.dart';
 
 NewsController newsController = Get.put(NewsController());
 UrlController urlController = Get.put(UrlController());

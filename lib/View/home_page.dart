@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news/Model/news_model.dart';
 import 'package:news/controller/news_controller.dart';
 
 import '../utils/global.dart';
-
-
-
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,7 +18,11 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           centerTitle: true,
-          title: const Text('World News',style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w500),),
+          title: const Text(
+            'World News',
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),
+          ),
           bottom: const TabBar(
             dividerColor: Colors.grey,
             dividerHeight: 0.5,
@@ -76,15 +76,20 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                (newsController.newsModel!.articles[index].urlToImage == '')
+                                (newsController.newsModel!.articles[index]
+                                            .urlToImage ==
+                                        '')
                                     ? 'https://img.freepik.com/premium-photo/cardano-blockchain-platform_23-2150411956.jpg'
-                                    : newsController.newsModel!.articles[index].urlToImage,fit: BoxFit.cover,
+                                    : newsController
+                                        .newsModel!.articles[index].urlToImage,
+                                fit: BoxFit.cover,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  newsController.newsModel!.articles[index].source.name,
-                                  style: TextStyle(
+                                  newsController
+                                      .newsModel!.articles[index].source.name,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17,
@@ -92,13 +97,15 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8,right: 5),
+                                padding:
+                                    const EdgeInsets.only(left: 8, right: 5),
                                 child: Text(
-                                  newsController.newsModel!.articles[index].title,
-                                  style: TextStyle(color: Colors.white),
+                                  newsController
+                                      .newsModel!.articles[index].title,
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           ),
                         ),
@@ -136,15 +143,20 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                (newsController.techDataModel!.articles[index].urlToImage == '')
+                                (newsController.techDataModel!.articles[index]
+                                            .urlToImage ==
+                                        '')
                                     ? 'https://img.freepik.com/premium-photo/cardano-blockchain-platform_23-2150411956.jpg'
-                                    : newsController.techDataModel!.articles[index].urlToImage,fit: BoxFit.cover,
+                                    : newsController.techDataModel!
+                                        .articles[index].urlToImage,
+                                fit: BoxFit.cover,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  newsController.techDataModel!.articles[index].source.name,
-                                  style: TextStyle(
+                                  newsController.techDataModel!.articles[index]
+                                      .source.name,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17,
@@ -152,13 +164,15 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8,right: 5),
+                                padding:
+                                    const EdgeInsets.only(left: 8, right: 5),
                                 child: Text(
-                                  newsController.techDataModel!.articles[index].title,
-                                  style: TextStyle(color: Colors.white),
+                                  newsController
+                                      .techDataModel!.articles[index].title,
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           ),
                         ),
@@ -197,15 +211,20 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                (newsController.businessDataModel!.articles[index].urlToImage == '')
+                                (newsController.businessDataModel!
+                                            .articles[index].urlToImage ==
+                                        '')
                                     ? 'https://img.freepik.com/premium-photo/cardano-blockchain-platform_23-2150411956.jpg'
-                                    : newsController.businessDataModel!.articles[index].urlToImage,fit: BoxFit.cover,
+                                    : newsController.businessDataModel!
+                                        .articles[index].urlToImage,
+                                fit: BoxFit.cover,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  newsController.businessDataModel!.articles[index].source.name,
-                                  style: TextStyle(
+                                  newsController.businessDataModel!
+                                      .articles[index].source.name,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17,
@@ -213,13 +232,15 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8,right: 5),
+                                padding:
+                                    const EdgeInsets.only(left: 8, right: 5),
                                 child: Text(
-                                  newsController.businessDataModel!.articles[index].title,
-                                  style: TextStyle(color: Colors.white),
+                                  newsController
+                                      .businessDataModel!.articles[index].title,
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           ),
                         ),
@@ -257,15 +278,20 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                (newsController.techDataModel!.articles[index].urlToImage == '')
+                                (newsController.techDataModel!.articles[index]
+                                            .urlToImage ==
+                                        '')
                                     ? 'https://img.freepik.com/premium-photo/cardano-blockchain-platform_23-2150411956.jpg'
-                                    : newsController.techDataModel!.articles[index].urlToImage,fit: BoxFit.cover,
+                                    : newsController.techDataModel!
+                                        .articles[index].urlToImage,
+                                fit: BoxFit.cover,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  newsController.techDataModel!.articles[index].source.name,
-                                  style: TextStyle(
+                                  newsController.techDataModel!.articles[index]
+                                      .source.name,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17,
@@ -273,13 +299,15 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8,right: 5),
+                                padding:
+                                    const EdgeInsets.only(left: 8, right: 5),
                                 child: Text(
-                                  newsController.techDataModel!.articles[index].title,
-                                  style: TextStyle(color: Colors.white),
+                                  newsController
+                                      .techDataModel!.articles[index].title,
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           ),
                         ),
@@ -318,15 +346,20 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                (newsController.wallStreetDataModel!.articles[index].urlToImage == '')
+                                (newsController.wallStreetDataModel!
+                                            .articles[index].urlToImage ==
+                                        '')
                                     ? 'https://img.freepik.com/premium-photo/cardano-blockchain-platform_23-2150411956.jpg'
-                                    : newsController.wallStreetDataModel!.articles[index].urlToImage,fit: BoxFit.cover,
+                                    : newsController.wallStreetDataModel!
+                                        .articles[index].urlToImage,
+                                fit: BoxFit.cover,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  newsController.wallStreetDataModel!.articles[index].source.name,
-                                  style: TextStyle(
+                                  newsController.wallStreetDataModel!
+                                      .articles[index].source.name,
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17,
@@ -334,13 +367,15 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8,right: 5),
+                                padding:
+                                    const EdgeInsets.only(left: 8, right: 5),
                                 child: Text(
-                                  newsController.wallStreetDataModel!.articles[index].title,
-                                  style: TextStyle(color: Colors.white),
+                                  newsController.wallStreetDataModel!
+                                      .articles[index].title,
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           ),
                         ),
@@ -360,30 +395,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // api autoMobiles...
 // FutureBuilder(
