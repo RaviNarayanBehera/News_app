@@ -3,18 +3,10 @@ import 'package:get/get.dart';
 import 'package:news/Model/news_model.dart';
 import 'package:news/controller/news_controller.dart';
 
-List bottomBar = [
-  const Icon(Icons.home_outlined),
-  const Icon(Icons.search),
-  const Icon(Icons.square_outlined),
-  const Icon(Icons.person_add_alt),
-  const Icon(Icons.notifications_none_rounded),
-  const Icon(Icons.mail_outline_rounded),
-];
-int selectPage = 0;
-int selectedIndex = 0;
-var detailPage;
-NewsModel? detailList;
+import '../utils/global.dart';
+
+
+
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
